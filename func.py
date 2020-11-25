@@ -5,10 +5,10 @@ def task1(first, second):
         teach= [i for i in teachbaza if i['id']== first]
         if not teach: return None
     with open('students.csv', 'r') as File2:
-        studbaza= csv.Dictreader(File2, delimiter= ',', encoding='utf8')
+        studbaza= csv.DictReader(File2, delimiter= ',', encoding='utf8')
         stud= [i for i in studbaza if i['group_id']== second]
     with open('subjects.csv', 'r') as File3:
-        subbaza= csv.Dictreader(File3, delimiter=',', encoding='utf8')
+        subbaza= csv.DictReader(File3, delimiter=',', encoding='utf8')
     with open('results.csv', 'r') as File4:
         resbaza= csv.DcitReader(File4, delimiter=',', encoding='utf8')
     for subject in subbaza:
